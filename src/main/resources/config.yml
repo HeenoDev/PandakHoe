@@ -1,1 +1,54 @@
-hoes:
+items:
+  "bleMutee":
+    type: NORMAL
+    material: WHEAT
+    data: 0
+    hide-flags:
+      - HIDE_ENCHANTS
+    enchants:
+      - "ARROW_INFINITE:1" #<nom de l'enchant>:<niveau de l'enchant>
+    name: "&eBlé Muté"
+    lore:
+      - ""
+      - "&etest"
+
+  "hoe1":
+    type: HOE
+    material: WOOD_HOE
+    data: 0
+    settings:
+      next-hoe: "hoe2" #ne rien mettre si c'est la last.
+      radius: 1 - #2 -> 3x3, #3 -> 5x5 ect..
+      require-to-level-up:
+        BREAK:
+          - POTATO: 5000
+          - WHEAT: 6000
+          - NETHER_WARTS: 100000 #netherstalk
+    hide-flags:
+      - HIDE_ENCHANTS
+    enchants:
+      - "ARROW_INFINITE:1" #<nom de l'enchant>:<niveau de l'enchant>
+    name: "&eHoe lvl %level_hoe%
+    lore:
+      - ""
+      - "&etest"
+      - "&ecasser %actual_potato%/%required_potato%"
+      - "&ecasser %actual_wheat%/%required_wheat%"
+      - "&ecasser %actual_wheat%/%required_wheat% %actual_wheat_percent%"
+      - "&b%global_progression_bar%"
+
+
+  "hoe2":
+    type: HOE
+    material: WOOD_HOE
+    data: 0
+    settings:
+      next-hoe: ""
+    hide-flags:
+      - HIDE_ENCHANTS
+    enchants:
+      - "ARROW_INFINITE:1" #<nom de l'enchant>:<niveau de l'enchant>
+    name: "&eBlé Muté"
+    lore:
+      - ""
+      - "&etest"
